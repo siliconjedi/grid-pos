@@ -9,23 +9,35 @@ html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 90px 90px 450px 90px;
+  grid-template-columns: 270px 810px;
+  gap: 15px;
 }
 
 .container div {
   padding: 15px;
-  font-size: 32px;
+  font-size: 24px;
   font-family: Helvetica;
   font-weight: bold;
   color: white;
   border-radius: 15px;
+
+
 }
 
 .header {
   background-color: #006157;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 .sidebar {
   background-color: #005B94;
+  grid-row: 2 / 4;
+  grid-column: 1 / 2;
 }
 
 .nav {
@@ -38,10 +50,11 @@ html {
 
 .footer {
   background-color: #393f4d;
+  grid-area: 4 / 1 / 5 / 3;
 }
 
 .article p {
-  font-size: 18px;
+  font-size: 15px;
   font-family: sans-serif;
   color: white;
   text-align: left;
